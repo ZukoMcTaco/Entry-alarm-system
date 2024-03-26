@@ -67,11 +67,13 @@ We quickly moved to an LCD implementation having figured out that the Arduinos c
 We took inspiration from an online post of an implementation of a speaker in a circuit: this involved creating a header file which contained the location of all the notes to be used by the speaker (Akshay James–YouTube, 2015). This implementation did not work too well for us as we didn’t utilize most of the notes in the header file containing the notes which would mean that the Arduino would be wasting storage that may be required. To circumvent this, we decided to implement a local integer array in the function responsible for triggering the doorbell ring and then used the tone function to play these notes when the doorbell button was pressed outside. We also thought of making use of the speaker to emit a sound when the alarm was triggered. During the testing process, our implementation made use of delays and this caused the alarm to play only a single note and we were unsure if this was a physical limitation of I2C as we did notice that the communication speed was quite slow, or if it was due to the delays that were responsible for making sure that the LCD displayed the text long enough on screen. We did try to fix this by reducing the amount of delays used in the code, however, the LCD would then not display the text long enough, and only one note would just play. Therefore, we decided to just play one note when the alarm is triggered.
 
 ## Final prototype:
-Inputs	Outputs
-Potentiometer – used to adjust the contrast on the LCD.	LCD display - responsible for displaying the messages: “Ring doorbell before entering”, “Please wait for response”, “INTRDUER ALERT!”
-Doorbell button – used to signal the Speaker to output the doorbell ring sound.	Speaker - outputs the doorbell ring sound if doorbell button pressed and the alarm sound if the alarm is triggered.
-Answer button- used to accept the visitor’s request and signals the LCD to update to “You can come in”. 	Serial monitor (only used during testing) - used for monitoring if components worked as intended.
-Ultrasonic sensor - used to detect if a door is opened without permission, if it is, then a signal is sent to the agent Arduino.	
+| Inputs  | Outputs |
+| ------------- | ------------- |
+| Potentiometer – used to adjust the contrast on the LCD.  | LCD display - responsible for displaying the messages: “Ring doorbell before entering”, “Please wait for response”, “INTRDUER ALERT!”  |
+| Doorbell button – used to signal the Speaker to output the doorbell ring sound. | Speaker - outputs the doorbell ring sound if doorbell button pressed and the alarm sound if the alarm is triggered.  |
+| Answer button- used to accept the visitor’s request and signals the LCD to update to “You can come in”.  | Serial monitor (only used during testing) - used for monitoring if components worked as intended.|
+| Ultrasonic sensor - used to detect if a door is opened without permission, if it is, then a signal is sent to the agent Arduino.| ------------- |
+
 
 Communication Method: I2C between 2 Arduinos.
 How each component interacts with one another:

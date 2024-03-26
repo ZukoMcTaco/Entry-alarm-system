@@ -77,10 +77,10 @@ We took inspiration from an online post of an implementation of a speaker in a c
 
 Communication Method: I2C between 2 Arduinos.
 How each component interacts with one another:
-First Stage (1st case):
+### First Stage (1st case):
 The potentiometer is adjusted to display the text on the LCD correctly. The LCD would display the message: “Ring the doorbell before entry.” The visitor would then need to press the doorbell button.
 (2nd case): The person enters the room without pressing the doorbell which prompts the speaker to output the alarm sound and the LCD updates to display: “INTRUDER ALERT!”
-Second Stage:
+### Second Stage:
 The speaker outputs the doorbell sound, and this would cause the LCD to update the current message to: “Please wait for response”.
 Third Stage (1st case):
 The person inside then presses the button to accept the visitor’s request. This sends a signal of “1” to the agent.

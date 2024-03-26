@@ -17,11 +17,13 @@ Cons/reasons why we may not implement a similar system:
 -The parts may become costly.
 - We would need to develop a mobile app to control this which adds further complexity.
 Taking inspiration from this, we decided to look at other systems provided by Ring, and they also provided doorbell systems which included a video doorbell system. This allows you to view who is trying to enter, and also speak to them before letting them in. (Ring, 2022)
-Pros:
+
+### Pros:
 - You can see who is at the door so you know exactly who you are letting into your house.
 -You can speak to the visitor.
 -You have remote access to the controls via the app.
-Cons/ reasons why we may not implement a similar system:
+
+### Cons/ reasons why we may not implement a similar system:
 -The system is very difficult to develop as a project.
 - It involves wireless communications which is rather complicated and may be too much for a small scale project.
 - Voice communication will be very difficult to execute as it requires various different components that may be too much for an Arduino to handle.

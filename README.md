@@ -8,11 +8,11 @@ We designed an Arduino system which manages the entry of people in someone’s r
 ## Literature and Technology review:
 
 Having researched our potential solutions, we had a look at already existing entry control systems: most entry control systems make use of an intercom to notify the owner of the house if they are allowed to enter the house (Ring, 2022).
-Pros:
+### Pros:
 - It makes it very easy for the owner to communicate with the visitor using an app.
 - You don’t have to be in the house to let guests in.
 - It’s more secure as you know who you are letting into your house.
-Cons/reasons why we may not implement a similar system:
+### Cons/reasons why we may not implement a similar system:
 - It’s very difficult to implement a wireless communication system with Arduinos.
 -The parts may become costly.
 - We would need to develop a mobile app to control this which adds further complexity.
